@@ -1,0 +1,65 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"Abastecimiento" ["margin"="0.3","orientation"="289","shape"="egg","fontsize"="16","style"="bold","label"="Abastecimiento\n","fontname"="sans-serif"]
+"AbastecimientoPorTerceros" ["margin"="0.3","orientation"="314","shape"="egg","fontsize"="16","style"="bold","label"="AbastecimientoPorTerceros\n","fontname"="sans-serif"]
+"Inventario" ["margin"="0.3","orientation"="196","shape"="egg","fontsize"="16","style"="bold","label"="Inventario\n","fontname"="sans-serif"]
+"ManejoOrdenes" ["margin"="0.3","orientation"="204","shape"="egg","fontsize"="16","style"="bold","label"="ManejoOrdenes\n","fontname"="sans-serif"]
+"Soporte" ["margin"="0.3","orientation"="199","shape"="egg","fontsize"="16","style"="bold","label"="Soporte\n","fontname"="sans-serif"]
+"RastreoOrdenes" ["margin"="0.3","orientation"="340","shape"="egg","fontsize"="16","style"="bold","label"="RastreoOrdenes\n","fontname"="sans-serif"]
+"Almacenamiento" ["margin"="0.3","orientation"="133","shape"="egg","fontsize"="16","style"="bold","label"="Almacenamiento\n","fontname"="sans-serif"]
+"Empaquetado" ["margin"="0.3","orientation"="245","shape"="egg","fontsize"="16","style"="bold","label"="Empaquetado\n","fontname"="sans-serif"]
+"Recibimiento" ["margin"="0.3","orientation"="117","shape"="egg","fontsize"="16","style"="bold","label"="Recibimiento\n","fontname"="sans-serif"]
+"DistribuirAlimentos" ["margin"="0.3","orientation"="349","shape"="egg","fontsize"="16","style"="bold","label"="DistribuirAlimentos\n","fontname"="sans-serif"]
+"DistribuirBienes" ["margin"="0.3","orientation"="274","shape"="egg","fontsize"="16","style"="bold","label"="DistribuirBienes\n","fontname"="sans-serif"]
+"EntregaPedidos" ["margin"="0.3","orientation"="210","shape"="egg","fontsize"="16","style"="bold","label"="EntregaPedidos\n","fontname"="sans-serif"]
+"EntregaPorTerceros" ["margin"="0.3","orientation"="302","shape"="egg","fontsize"="16","style"="bold","label"="EntregaPorTerceros\n","fontname"="sans-serif"]
+"Retornos" ["margin"="0.3","orientation"="120","shape"="egg","fontsize"="16","style"="bold","label"="Retornos\n","fontname"="sans-serif"]
+"Abastecimiento" -> "AbastecimientoPorTerceros" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Abastecimiento" -> "Inventario" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"Inventario" -> "ManejoOrdenes" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"ManejoOrdenes" -> "Soporte" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"ManejoOrdenes" -> "RastreoOrdenes" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"Almacenamiento" -> "Empaquetado" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"Almacenamiento" -> "Abastecimiento" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"Almacenamiento" -> "Recibimiento" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"Empaquetado" -> "Inventario" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DistribuirAlimentos" -> "Empaquetado" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"DistribuirBienes" -> "Empaquetado" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"EntregaPedidos" -> "RastreoOrdenes" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"EntregaPedidos" -> "EntregaPorTerceros" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"EntregaPorTerceros" -> "DistribuirAlimentos" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"EntregaPorTerceros" -> "DistribuirBienes" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Retornos" -> "ManejoOrdenes" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+}

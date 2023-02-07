@@ -1,11 +1,13 @@
 ContextMap EntregasAlpes {
-    state = AS_IS
+    state = TO_BE
     type SYSTEM_LANDSCAPE
 
     contains Almacenamiento
     contains EntregaPedidos
     contains DistribuirBienes
     contains DistribuirAlimentos
+    contains EntregaPorTerceros
+    contains AbastecimientoPorTerceros
     contains Abastecimiento
     contains Recibimiento
     contains Retornos
@@ -19,12 +21,14 @@ ContextMap EntregasAlpes {
     Inventario <- Empaquetado
     Empaquetado <- DistribuirBienes
     Empaquetado <- DistribuirAlimentos
-    DistribuirBienes -> EntregaPedidos
-    DistribuirAlimentos -> EntregaPedidos
+    EntregaPorTerceros[ACL]<- EntregaPedidos
+    DistribuirBienes <- EntregaPorTerceros
+    DistribuirAlimentos <- EntregaPorTerceros
     Almacenamiento [P]<->[P] Abastecimiento
     Almacenamiento [P]<->[P] Recibimiento
     Almacenamiento [P]<->[P] Empaquetado
     Abastecimiento [P]<->[P] Inventario
+    Abastecimiento ->[ACL] AbastecimientoPorTerceros
     Retornos [P]<->[P] ManejoOrdenes
     ManejoOrdenes [P]<->[P] RastreoOrdenes
     ManejoOrdenes [P]<->[P] Soporte
@@ -92,6 +96,11 @@ BoundedContext Empaquetado
 }
 
 BoundedContext Soporte 
+{ 
+    type SYSTEM
+}
+
+BoundedContext AbastecimientoPorTerceros 
 { 
     type SYSTEM
 }

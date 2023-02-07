@@ -1,0 +1,18 @@
+Domain Orden {
+    domainVisionStatement = "Llevar el control de todas las ordenes que entran en el sistema, tanto el cambio de estado como el rastreo de las mismas."
+    
+    Subdomain ManejoOrdenes {
+        domainVisionStatement = "Creacion, actualizacion, listado, busqueda, eliminacion de ordenes de entrga de los alpes "
+        type = CORE_DOMAIN
+    }
+
+    Subdomain RastreoOrdenes {
+        domainVisionStatement = "Rastrear el lugar y estado de la orden para satisfacer los requerimientos del cliente."
+        type = CORE_DOMAIN
+    }
+
+    Subdomain Soporte {
+        domainVisionStatement = "Brindar soporte a los clientes sobre todas las inconsistencias que se presenten en el proceso de suministro."
+        type = SUPPORTING_DOMAIN
+    }
+}

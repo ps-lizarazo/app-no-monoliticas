@@ -3,11 +3,6 @@ Domain Logistica {
   domainVisionStatement = "Coordinar todos los procesos necesarios para que el proceso de entrega y recolección de paquetería y delivery sea lo más eficiente posible.
     Encargarnos de todos los pasos del proceso, Almacenamiento, Transporte y entrega, con esto garantizar la satisfacción de nuestros clientes."
 
-   Subdomain Almacenamiento {
-    type = CORE_DOMAIN
-    domainVisionStatement = "Manejar el proceso de almacenamiento de los productos que se van a entregar, para que estos estén disponibles para su distribición."
-  }
-
   Subdomain EntregaPedidos {
     type = CORE_DOMAIN
     domainVisionStatement = "Encargarnos de la entrega de los pedidos a los clientes, para que estos reciban sus productos en el menor tiempo posible."
