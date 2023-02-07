@@ -1,0 +1,27 @@
+ContextMap EntregasAlpes {
+    state = AS_IS
+    type = SYSTEM_LANDSCAPE
+
+    contains Almacenamiento
+    contains EntregaPedidos
+
+    Almacenamiento [SK] <-> [SK] EntregaPedidos
+
+}
+
+BoundedContext Almacenamiento 
+{
+    
+}
+
+BoundedContext EntregaPedidos 
+{ 
+    Module entregaPedidos
+
+    Aggregate Pedido{
+        Entity Pedido
+        ValueObject Direccion
+        ValueObject Producto
+        
+    }
+}
