@@ -2,7 +2,7 @@ Domain Orden {
     domainVisionStatement = "Llevar el control de todas las ordenes que entran en el sistema, tanto el cambio de estado como el rastreo de las mismas."
     
     Subdomain ManejoOrdenes {
-        domainVisionStatement = "Creacion, actualizacion, listado, busqueda, eliminacion de ordenes de entrga de los alpes "
+        domainVisionStatement = "Creacion, actualizacion, listado, busqueda, eliminacion de ordenes de entrega de los alpes "
         type = CORE_DOMAIN
     }
 

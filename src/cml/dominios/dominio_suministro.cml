@@ -1,0 +1,34 @@
+Domain Suministro {
+  domainVisionStatement = "Maximizar la disponibilidad de los productos y servicios de la empresa, a través de la gestión eficiente de los recursos de la cadena de suministro."
+
+  Subdomain Almacenamiento {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Almacenar los bienes de forma eficiente, para garantizar su disponibilidad en el momento oportuno."
+  }
+
+  Subdomain Abastecimiento {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Abastecer los bienes faltantes, para así, garantizar el cumplimiento de los pedidos en su totalidad."
+  }
+
+  Subdomain Recibimiento {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Recibir e inspeccionar la calidad de los bienes recepcionados para garantizar la satisfacción del cliente al momento de la entrega."
+  }
+
+  Subdomain Retornos {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "Retornar los bienes que no cumplan con la calidad esperada."
+  }
+
+  Subdomain Inventario {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Registra de forma detallada la cantidad, ubicación y valor de cada uno de los elementos bienes que forman parte de las mercancías enviadas por la empresa ."
+  }
+
+  Subdomain Empaquetado {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Asegurarse que los bienes antes de ser transportados, se encuentren correctamente protegidos y estén debidamente identificados."
+  }
+
+}

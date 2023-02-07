@@ -4,8 +4,8 @@ ContextMap EntregasAlpes {
 
     contains Almacenamiento
     contains EntregaPedidos
-    contains DistribuirBienes
-    contains DistribuirAlimentos
+    contains DistribucionBienes
+    contains DistribucionAlimentos
     contains Abastecimiento
     contains Recibimiento
     contains Retornos
@@ -17,10 +17,10 @@ ContextMap EntregasAlpes {
     
     ManejoOrdenes [C]<-[S] Inventario
     Inventario <- Empaquetado
-    Empaquetado <- DistribuirBienes
-    Empaquetado <- DistribuirAlimentos
-    DistribuirBienes -> EntregaPedidos
-    DistribuirAlimentos -> EntregaPedidos
+    Empaquetado <- DistribucionBienes
+    Empaquetado <- DistribucionAlimentos
+    DistribucionBienes -> EntregaPedidos
+    DistribucionAlimentos -> EntregaPedidos
     Almacenamiento [P]<->[P] Abastecimiento
     Almacenamiento [P]<->[P] Recibimiento
     Almacenamiento [P]<->[P] Empaquetado
@@ -46,12 +46,12 @@ BoundedContext EntregaPorTerceros
     type SYSTEM
 }
 
-BoundedContext DistribuirBienes 
+BoundedContext DistribucionBienes 
 { 
     type SYSTEM
 }
 
-BoundedContext DistribuirAlimentos 
+BoundedContext DistribucionAlimentos 
 { 
     type SYSTEM
 }

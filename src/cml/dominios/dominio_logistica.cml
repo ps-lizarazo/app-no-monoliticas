@@ -1,0 +1,26 @@
+Domain Logistica {
+
+  domainVisionStatement = "Coordinar todos los procesos necesarios para que el proceso de entrega y recolección de paquetería y delivery sea lo más eficiente posible.
+    Encargarnos de todos los pasos del proceso, almacenamiento, transporte y entrega, con esto garantizar la satisfacción de nuestros clientes."
+
+  Subdomain EntregaPedidos {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Transporte y entrega de pedidos, por parte de la empresa, para que los clientes reciban sus productos oportunamente."
+  }
+
+  Subdomain DistribucionBienes {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Definición de la ruta que tendrán los bienes no perecibles para que estos puedan ser entregados en el menor tiempo posible y optimizando costos."
+  }
+
+  Subdomain DistribucionAlimentos {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Definición de la ruta que tendrán los bienes perecibles para que estos puedan ser entregados en el menor tiempo posible, optimizando costos y evitando su posible deterioro."
+  }
+
+  Subdomain EntregaPorTerceros {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "Transporte y entrega de pedidos, por parte de terceros, para que los clientes reciban sus productos oportunamente."
+  }
+
+}
