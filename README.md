@@ -9,6 +9,7 @@
    * mapas_contexto -> Contiene los fragmentos de código para detallar los mapas de contexto. Este folder contiene 2 folders dentro: 
       * as_is -> Contiene mapas de contexto actualmente el sistema.
       * to_be -> Contiene mapas de contexto con su respectivo rediseño.
+* src-gen -> Contiene los gráficos de los mapas de contexto.
 * .gitignore -> Archivo de detalle de archivos que no serán tomados en cuenta en git.
 * .gitpod.Dockerfile -> Archivo necesario para ejecución.
 * .gitpod.yml -> Archivo necesario para ejecución.
