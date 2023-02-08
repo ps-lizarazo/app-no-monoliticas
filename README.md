@@ -2,11 +2,19 @@
 
 ## Estructura
 
-* dominios (src/dominios) -> Contiene los fragmentos de código para detallar los dominios del proyecto. Dentro de cada archivo de dominio encontrará los subdominios que contiene cada uno.
-* mapas_contexto (src/mapas_contexto) -> Contiene los fragmentos de código para detallar los mapas de contexto. Este folder contiene 2 folders dentro: 
-    * as_is (mapas de contexto actualmente el sistema)
-    * to_be (mapas de contexto con su respectivo rediseño).
-* entrega1 (entrega1) -> Contiene imágenes que forman parte de la entrega 1, relacionadas con los mapas de contexto y los eventstorming realizados.
+* .graddle -> Contiene archivos necesarios para la ejecución.
+* entrega1 -> Contiene imágenes que forman parte de la entrega 1, relacionadas con los mapas de contexto y los eventstorming realizados.
+* src/cml
+   * dominios -> Contiene los fragmentos de código para detallar los dominios del proyecto. Dentro de cada archivo de dominio encontrará los subdominios que contiene cada uno.
+   * mapas_contexto -> Contiene los fragmentos de código para detallar los mapas de contexto. Este folder contiene 2 folders dentro: 
+      * as_is -> Contiene mapas de contexto actualmente el sistema.
+      * to_be -> Contiene mapas de contexto con su respectivo rediseño.
+* .gitignore -> Archivo de detalle de archivos que no serán tomados en cuenta en git.
+* .gitpod.Dockerfile -> Archivo necesario para ejecución.
+* .gitpod.yml -> Archivo necesario para ejecución.
+* build.gradle -> Archivo necesario para ejecución.
+* package-lock.json -> Contiene información de la app y los packages ya instalados.
+* README.md -> Guía
 
 ## Ubicaciones de documentos a revisar
 
