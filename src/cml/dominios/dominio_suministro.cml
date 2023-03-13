@@ -11,6 +11,11 @@ Domain Suministro {
     domainVisionStatement = "Abastecer los bienes faltantes, para así, garantizar el cumplimiento de los pedidos en su totalidad."
   }
 
+  Subdomain AbastecimientoPorTerceros {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Abastecer los bienes faltantes realizado por terceros."
+  }
+
   Subdomain Recibimiento {
     type = CORE_DOMAIN
     domainVisionStatement = "Recibir e inspeccionar la calidad de los bienes recepcionados para garantizar la satisfacción del cliente al momento de la entrega."

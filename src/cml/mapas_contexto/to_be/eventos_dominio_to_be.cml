@@ -12,6 +12,7 @@ ContextMap EntregasAlpes {
     contains EntregaPersonalPropio
     contains Almacenamiento
     contains Abastecimiento
+    contains AbastecimientoPorTerceros
     contains Recibimiento
     contains CentrosDistribucion
     contains Inventario
@@ -24,6 +25,7 @@ ContextMap EntregasAlpes {
     PlanificacionPedidos [P]<->[P] IntegracionLogistica
     IntegracionLogistica [P]<->[P] CentrosDistribucion
     CentrosDistribucion [P]<->[P] Abastecimiento
+    Abastecimiento [ACL]<- AbastecimientoPorTerceros
     Abastecimiento -> Balance
     Abastecimiento -> Recibimiento
     Abastecimiento -> Retornos
@@ -79,6 +81,10 @@ BoundedContext Almacenamiento
     type SYSTEM
 }
 BoundedContext Abastecimiento 
+{
+    type SYSTEM
+}
+BoundedContext AbastecimientoPorTerceros
 {
     type SYSTEM
 }
