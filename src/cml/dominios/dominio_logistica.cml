@@ -3,24 +3,43 @@ Domain Logistica {
   domainVisionStatement = "Coordinar todos los procesos necesarios para que el proceso de entrega y recolección de paquetería y delivery sea lo más eficiente posible.
     Encargarnos de todos los pasos del proceso, almacenamiento, transporte y entrega, con esto garantizar la satisfacción de nuestros clientes."
 
-  Subdomain EntregaPedidos {
+  Subdomain PlanificacionPedidos {
     type = CORE_DOMAIN
-    domainVisionStatement = "Transporte y entrega de pedidos, por parte de la empresa, para que los clientes reciban sus productos oportunamente."
+    domainVisionStatement = "Planifica la orden recibida y se encarga de planificar todo el flujo para cumplir con la entrega total del pedido."
   }
 
-  Subdomain DistribucionBienes {
+  Subdomain DespachoPedidos {
     type = CORE_DOMAIN
-    domainVisionStatement = "Definición de la ruta que tendrán los bienes no perecibles para que estos puedan ser entregados en el menor tiempo posible y optimizando costos."
+    domainVisionStatement = "Controla el estado de los bienes hasta que estos son despachados."
   }
 
-  Subdomain DistribucionAlimentos {
+  Subdomain DespachoAlimentos {
     type = CORE_DOMAIN
-    domainVisionStatement = "Definición de la ruta que tendrán los bienes perecibles para que estos puedan ser entregados en el menor tiempo posible, optimizando costos y evitando su posible deterioro."
+    domainVisionStatement = "Controla el estado de los alimentos hasta que son entregados."
+  }
+
+  Subdomain AdministracionInstalacion {
+    type=  GENERIC_SUBDOMAIN
+    domainVisionStatement = "Gestiona el movimiento de los bienes/alimentos entre los distintos proveedores, centros de distribución hasta que estos llegan hacia los clientes."
+  }
+
+  Subdomain TrackingPedidos {
+    type=  GENERIC_SUBDOMAIN
+    domainVisionStatement = "Indican la ubicación y estado de bienes/alimentos hasta que estos son entregados al cliente."
+  }
+
+  Subdomain AdministracionUltimaMilla {
+    type=  SUPPORTING_DOMAIN
+    domainVisionStatement = "Gestiona el último recorrido de los bienes/alimentos antes ser entregados a un cliente."
   }
 
   Subdomain EntregaPorTerceros {
     type = SUPPORTING_DOMAIN
-    domainVisionStatement = "Transporte y entrega de pedidos, por parte de terceros, para que los clientes reciban sus productos oportunamente."
+    domainVisionStatement = "Recibe ordenes de entregas de bienes/alimentos que serán realizadas por terceros."
   }
 
+  Subdomain EntregaPersonalPropio {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "Recibe ordenes de entregas de bienes/alimentos que serán realizadas por personal de la compañia."
+  }
 }

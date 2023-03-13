@@ -16,9 +16,9 @@ Domain Suministro {
     domainVisionStatement = "Recibir e inspeccionar la calidad de los bienes recepcionados para garantizar la satisfacción del cliente al momento de la entrega."
   }
 
-  Subdomain Retornos {
-    type = SUPPORTING_DOMAIN
-    domainVisionStatement = "Retornar los bienes que no cumplan con la calidad esperada."
+  Subdomain CentrosDistribucion {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Controlar el movimiento de los bienes/alimentos entre las bodegas propias/externas o proveedores para que puedan ser despachados en los pedidos donde se solicitan."
   }
 
   Subdomain Inventario {
@@ -31,4 +31,23 @@ Domain Suministro {
     domainVisionStatement = "Asegurarse que los bienes antes de ser transportados, se encuentren correctamente protegidos y estén debidamente identificados."
   }
 
+  Subdomain Balance {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Verificar si la demanda sobre los bienes puede ser soportada con lo que se encuentra en almacenes propios o externos."
+  }
+
+  Subdomain Retornos {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "Retornar los bienes que no cumplan con la calidad esperada."
+  }
+
+  Subdomain IntegracionLogistica {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Comunicar a logística cuando se encuentra un pedido parcial/totalmente para ser despachado"
+  }
+
+  Subdomain DespachoInv {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Solicitar la actualización de estado de los pedidos recibidos para atenderse por el dominio de suministro"
+  }
 }

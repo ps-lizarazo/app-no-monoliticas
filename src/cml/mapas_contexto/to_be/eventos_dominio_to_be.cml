@@ -2,105 +2,116 @@ ContextMap EntregasAlpes {
     state = TO_BE
     type SYSTEM_LANDSCAPE
 
-    contains Almacenamiento
-    contains EntregaPedidos
-    contains DistribucionBienes
-    contains DistribucionAlimentos
+    contains PlanificacionPedidos
+    contains DespachoPedidos
+    contains DespachoAlimentos
+    contains AdministracionInstalacion
+    contains TrackingPedidos
+    contains AdministracionUltimaMilla
     contains EntregaPorTerceros
-    contains AbastecimientoPorTerceros
+    contains EntregaPersonalPropio
+    contains Almacenamiento
     contains Abastecimiento
     contains Recibimiento
-    contains Retornos
+    contains CentrosDistribucion
     contains Inventario
     contains Empaquetado
-    contains ManejoOrdenes
-    contains RastreoOrdenes
-    contains Soporte
+    contains Balance
+    contains Retornos
+    contains IntegracionLogistica
+    contains DespachoInv
     
-    ManejoOrdenes [C]<-[S] Inventario
-    Inventario <- Empaquetado
-    Empaquetado <- DistribucionBienes
-    Empaquetado <- DistribucionAlimentos
-    EntregaPorTerceros[ACL]<- EntregaPedidos
-    DistribucionBienes <- EntregaPorTerceros
-    DistribucionAlimentos <- EntregaPorTerceros
-    Almacenamiento [P]<->[P] Abastecimiento
-    Almacenamiento [P]<->[P] Recibimiento
-    Almacenamiento [P]<->[P] Empaquetado
-    Abastecimiento [P]<->[P] Inventario
-    Abastecimiento ->[ACL] AbastecimientoPorTerceros
-    Retornos [P]<->[P] ManejoOrdenes
-    ManejoOrdenes [P]<->[P] RastreoOrdenes
-    ManejoOrdenes [P]<->[P] Soporte
-    EntregaPedidos [P]<->[P] RastreoOrdenes
+    PlanificacionPedidos [P]<->[P] IntegracionLogistica
+    IntegracionLogistica [P]<->[P] CentrosDistribucion
+    CentrosDistribucion [P]<->[P] Abastecimiento
+    Abastecimiento -> Balance
+    Abastecimiento -> Recibimiento
+    Abastecimiento -> Retornos
+    Abastecimiento [S]->[C] Almacenamiento
+    CentrosDistribucion [P]<->[P] Almacenamiento
+    Almacenamiento -> Inventario
+    CentrosDistribucion -> Empaquetado
+    CentrosDistribucion -> DespachoInv
+    PlanificacionPedidos -> DespachoPedidos
+    PlanificacionPedidos -> DespachoAlimentos
+    PlanificacionPedidos [S]->[C] TrackingPedidos
+    PlanificacionPedidos [P]<->[P] AdministracionInstalacion
+    DespachoPedidos -> AdministracionUltimaMilla
+    DespachoAlimentos -> AdministracionUltimaMilla
+    AdministracionUltimaMilla -> EntregaPersonalPropio
+    AdministracionUltimaMilla -> EntregaPorTerceros
 }
 
+BoundedContext PlanificacionPedidos 
+{
+    type SYSTEM
+}
+BoundedContext DespachoPedidos 
+{
+    type SYSTEM
+}
+BoundedContext DespachoAlimentos 
+{
+    type SYSTEM
+}
+BoundedContext AdministracionInstalacion 
+{
+    type SYSTEM
+}
+BoundedContext TrackingPedidos 
+{
+    type SYSTEM
+}
+BoundedContext AdministracionUltimaMilla 
+{
+    type SYSTEM
+}
+BoundedContext EntregaPorTerceros 
+{
+    type SYSTEM
+}
+BoundedContext EntregaPersonalPropio 
+{
+    type SYSTEM
+}
 BoundedContext Almacenamiento 
 {
     type SYSTEM
 }
-
-BoundedContext EntregaPedidos 
-{ 
-    type SYSTEM
-}
-
-BoundedContext EntregaPorTerceros 
-{ 
-    type SYSTEM
-}
-
-BoundedContext DistribucionBienes 
-{ 
-    type SYSTEM
-}
-
-BoundedContext DistribucionAlimentos 
-{ 
-    type SYSTEM
-}
-
 BoundedContext Abastecimiento 
-{ 
+{
     type SYSTEM
 }
-
 BoundedContext Recibimiento 
-{ 
+{
     type SYSTEM
 }
-
-BoundedContext Retornos 
-{ 
+BoundedContext CentrosDistribucion 
+{
     type SYSTEM
 }
-
 BoundedContext Inventario 
-{ 
+{
     type SYSTEM
 }
-
-BoundedContext ManejoOrdenes 
-{ 
-    type SYSTEM
-}
-
-BoundedContext RastreoOrdenes 
-{ 
-    type SYSTEM
-}
-
 BoundedContext Empaquetado 
-{ 
+{
+    type SYSTEM
+}
+BoundedContext Balance 
+{
+    type SYSTEM
+}
+BoundedContext Retornos 
+{
+    type SYSTEM
+}
+BoundedContext IntegracionLogistica 
+{
+    type SYSTEM
+}
+BoundedContext DespachoInv 
+{
     type SYSTEM
 }
 
-BoundedContext Soporte 
-{ 
-    type SYSTEM
-}
-
-BoundedContext AbastecimientoPorTerceros 
-{ 
-    type SYSTEM
-}
